@@ -28,17 +28,17 @@
                 </MenuItem>
 
                 <MenuItem Header="Load">
-                    <MenuItem x:Name="MenuLoadNetwork" Header="Network"/>
+                    <MenuItem x:Name="MenuLoadNetwork" Header="Network" Click="MenuLoadNetwork_Click"/>
                     <MenuItem x:Name="MenuLoadImage" Header="Image"/>
                 </MenuItem>
 
                 <MenuItem Header="Save">
-                    <MenuItem x:Name="MenuSaveNetwork" Header="Network"/>
+                    <MenuItem x:Name="MenuSaveNetwork" Header="Network" Click="MenuSaveNetwork_Click"/>
                     <MenuItem x:Name="MenuSaveImage" Header="Image"/>
                 </MenuItem>
 
                 <Separator/>
-                <MenuItem x:Name="MenuFileExit" Header="Exit"/>
+                <MenuItem x:Name="MenuFileExit" Header="Exit" Click="MenuFileExit_Click"/>
 
             </MenuItem>
 
@@ -51,7 +51,7 @@
             </MenuItem>
 
             <MenuItem Header="Learn">
-                <MenuItem x:Name="MenuLearnLearning" Header="Learning"/>
+                <MenuItem x:Name="MenuLearnLearning" Header="Learning" Click="MenuLearnLearning_Click"/>
             </MenuItem>
 
             <MenuItem Header="Settings">
@@ -65,7 +65,7 @@
 
         </Menu>
 
-        <Grid Grid.Row="1" Grid.Column="0"  x:Name="gridPaint" Margin="30,10,30,10" Background="{DynamicResource LightBackgroundBrush}">
+        <Grid Grid.Row="1" Grid.Column="0"  x:Name="gridPaint" Margin="30,10,30,10" MouseDown="gridPaint_MouseDown">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
@@ -131,13 +131,13 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="3" Margin="5" >
-            <Button x:Name="btnOk" Content="OK" Width="50" Height="25" Margin="5,0,5,0" />
-            <Button x:Name="btnReset" Content="Reset" Width="50" Height="25" Margin="5,0,5,0" />
+            <Button x:Name="btnOk" Content="OK" Width="50" Height="25" Margin="5,0,5,0" Click="btnOk_Click"/>
+            <Button x:Name="btnReset" Content="Reset" Width="50" Height="25" Margin="5,0,5,0" Click="btnReset_Click"/>
         </StackPanel>
 
         <Label x:Name="lblResult" Content="-" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="35" Height="65" FontSize="42" Margin="0,0,0,0" Foreground="{DynamicResource LightForegroundBrush}" />
 
-        <ListBox x:Name="lbResults" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Margin="30,60,30,0" FontSize="18" Background="{DynamicResource LightBackgroundBrush}"/>
+        <ListBox x:Name="lbResults" Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Margin="30,60,30,0" FontSize="18" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}"/>
 
         <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Height="25" Orientation="Horizontal" VerticalAlignment="Bottom">
             <Label Content="Processing: " Margin="5,0,5,0" Foreground="{DynamicResource LightForegroundBrush}"/>

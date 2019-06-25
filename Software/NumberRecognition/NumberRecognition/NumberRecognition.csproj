@@ -69,6 +69,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Neural Network\Layer.cs" />
+    <Compile Include="Neural Network\NetworkProcessor.cs" />
+    <Compile Include="Neural Network\NeuralNetwork.cs" />
+    <Compile Include="Paint\PaintProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

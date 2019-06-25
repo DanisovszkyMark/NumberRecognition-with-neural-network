@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace NumberRecognition.Paint
 {
@@ -18,7 +19,7 @@ namespace NumberRecognition.Paint
 
             for (int i = 0; i < grid.Children.Count; i++)
             {
-                if ((grid.Children[i] as ListBox).Background == Brushes.White) atmInput[i] = 1;
+                if ((grid.Children[i] as Rectangle).Fill == Brushes.White) atmInput[i] = 1;
             }
 
             return atmInput;
